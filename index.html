@@ -534,7 +534,123 @@
         </section>
       </main>
     </div>
-    
+
+    <!-- добавить товар -->
+    <div class="popup popup--active">
+      <div class="popup__wrapper">
+        <header class="popup__top">
+          <h2 class="popup__title">ДОБАВИТЬ ТОВАР</h2>
+          <button class="popup__close" type="button" aria-label="Закрыть">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+              <path
+                d="M19 5L5 19M5 5L19 19"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+          </button>
+        </header>
+
+        <div class="popup__content">
+          <form class="add-product-form" action="#" method="post">
+            <div class="add-product-form__grid">
+              <div class="add-product-form__container">
+                <label class="add-product-form__label">
+                  <span class="add-product-form__label-text">НАИМЕНОВАНИЕ</span>
+                  <input class="add-product-form__input" type="text" name="name" />
+                </label>
+                <label class="add-product-form__label">
+                  <span class="add-product-form__label-text">КАТЕГОРИЯ</span>
+                  <input
+                    class="add-product-form__input"
+                    type="text"
+                    name="category"
+                  />
+                </label>
+              </div>
+              <label class="add-product-form__label">
+                <span class="add-product-form__label-text">ОПИСАНИЕ</span>
+                <textarea class="add-product-form__textarea" name="description"></textarea>
+              </label>
+              <label class="add-product-form__label">
+                <span class="add-product-form__label-text">ЕДИНИЦЫ ИЗМЕРЕНИЯ</span>
+                <input class="add-product-form__input" type="text" name="unit" />
+              </label>
+              <label class="add-product-form__label">
+                <span class="add-product-form__label-text">КОЛИЧЕСТВО</span>
+                <input
+                  class="add-product-form__input"
+                  type="number"
+                  name="quantity"
+                />
+              </label>
+              <label class="add-product-form__label add-product-form__label--checkbox">
+                <span class="add-product-form__label-text">ДИСКОНТ</span>
+                <div class="add-product-form__discount-group">
+                  <input
+                  class="add-product-form__checkbox"
+                  type="checkbox"
+                  name="discount"
+                  />
+                  <input type="text" class="add-product-form__input">
+                </div>
+              </label>
+              <label class="add-product-form__label">
+                <span class="add-product-form__label-text">ЦЕНА</span>
+                <input class="add-product-form__input" type="number" name="price" />
+              </label>
+              <div class="add-product-form__group">
+                <span class="add-product-form__image-upload-error">ИЗОБРАЖЕНИЕ НЕ ДОЛЖНО ПРЕВЫШАТЬ РАЗМЕР 1 МБ</span>
+                <button class="add-product-form__image-btn" type="button">
+                  ДОБАВИТЬ ИЗОБРАЖЕНИЕ
+                </button>
+              </div>
+            </div>
+          </form>
+        </div>
+
+        <footer class="popup__footer">
+          <div class="add-product-form__total">
+            <span class="add-product-form__total-label"
+              >Итоговая стоимость:</span
+            >
+            <span class="add-product-form__total-value">$ 900.00</span>
+          </div>
+          <button class="popup__add-btn" type="submit" form="add-product-form">
+            ДОБАВИТЬ ТОВАР
+          </button>
+        </footer>
+      </div>
+    </div>
+
+    <!-- окно ошибки -->
+    <div class="popup popup--error">
+      <div class="popup__wrapper">
+        <header class="popup__top">
+          <button class="popup__close" type="button" aria-label="Закрыть">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+              <path
+                d="M19 5L5 19M5 5L19 19"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+          </button>
+        </header>
+
+        <div class="popup__content popup__content--centered">
+          <svg class="popup__error-icon" width="100" height="100" viewBox="0 0 24 24" fill="none" stroke="red" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="18" y1="6" x2="6" y2="18"></line>
+            <line x1="6" y1="6" x2="18" y2="18"></line>
+          </svg>
+          <p class="popup__error-text">ЧТО-ТО ПОШЛО НЕ ТАК</p>
+        </div>
+      </div>
+    </div>
 
   </body>
 </html>
